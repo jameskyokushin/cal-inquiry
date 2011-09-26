@@ -4,6 +4,6 @@ ActiveAdmin.register Inquiry do
     column :company_address
     column :contact_person
     column :id
+    default_actions 
   end
-  
 end
