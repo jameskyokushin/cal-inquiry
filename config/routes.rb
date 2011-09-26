@@ -1,4 +1,6 @@
 InquiryCal::Application.routes.draw do
+  resources :inquiries
+
   resources :systems
 
   ActiveAdmin.routes(self)
