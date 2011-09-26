@@ -1,5 +1,15 @@
 ActiveAdmin::Dashboards.build do
-
+   
+  section "Recent Calls" do
+    table_for Inquiry.order("created_at desc").limit(5) do
+      column :company_name do |inquiry|
+        link_to inquiry.company_name, admin_inquiry_path(inquiry)
+      end
+     column :inquiry 
+    end
+     strong { link_to "View All Calls", admin_inquiries_path }
+  end
+  
   # Define your dashboard sections here. Each block will be
   # rendered on the dashboard in the context of the view. So just
   # return the content which you would like to display.

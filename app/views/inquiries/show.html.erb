@@ -1,30 +1,8 @@
-<p id="notice"><%= notice %></p>
+<h6 id="notice"><%= notice %></h6>
+<br />
+<h3>your input will generate to our database thank you. Osu!</h3>
+<br />
+<br />
 
-<p>
-  <b>Company name:</b>
-  <%= @inquiry.company_name %>
-</p>
+<%= link_to 'Users Only', new_inquiry_path %>
 
-<p>
-  <b>Company address:</b>
-  <%= @inquiry.company_address %>
-</p>
-
-<p>
-  <b>Contact person:</b>
-  <%= @inquiry.contact_person %>
-</p>
-
-<p>
-  <b>Contact number:</b>
-  <%= @inquiry.contact_number %>
-</p>
-
-<p>
-  <b>Inquiry:</b>
-  <%= @inquiry.inquiry %>
-</p>
-
-
-<%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
-<%= link_to 'Back', inquiries_path %>
