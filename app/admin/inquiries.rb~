@@ -7,7 +7,7 @@ form do |f|
       f.input :contact_person
     end
     f.inputs "Contact Number" do
-       #f.input :tel, :input_html => { :style => "width: 120px"}
+       f.input :tel, :input_html => { :style => "width: 120px"}
        #f.input :cp,  :input_html => { :style => "width: 120px"}
        #f.input :fax, :input_html => { :style => "width: 120px"}
     end
