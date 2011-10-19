@@ -12,7 +12,7 @@ form do |f|
        f.input :fax, :input_html => { :style => "width: 120px"}
     end
     f.inputs "Request / Source" do
-       f.input :source,  :collection => [["Website","Wesite"],["Fliers", "Fliers"],["News Paper",["Sales Representative","Sales Representative"]]], :as => :radio 
+       f.input :source,  :collection => [["Website","Wesite"],["Fliers", "Fliers"],["News Paper",["Sales Representative","Sales Representative"]]] :as => :radio 
        f.input :inquiry, :label => "Request", :input_html => { :rows => 3 }
     end
     f.buttons
