@@ -1,5 +1,8 @@
 ActiveAdmin.register Inquiry do
 
+filter :company_name
+filter :contact_person
+
  show :title => :company_name do
     panel "Company Information" do
       attributes_table_for inquiry do
