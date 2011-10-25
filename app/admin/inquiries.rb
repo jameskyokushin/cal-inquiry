@@ -3,7 +3,7 @@ ActiveAdmin.register Inquiry do
 filter :company_name
 filter :contact_person
 
- show :title => :company_name do
+ show :title => :sales_engineer do
     panel "Company Information" do
       attributes_table_for inquiry do
       row("Company Name") { inquiry.company_name }
@@ -29,12 +29,13 @@ form do |f|
       f.input :contact_person
     end
     f.inputs "Contact Number" do
-       f.input :tel, :input_html => { :style => "width: 120px"}
-       f.input :cp,  :input_html => { :style => "width: 120px"}
-       f.input :fax, :input_html => { :style => "width: 120px"}
+       f.input :tel, :input_html => { :style => "width: 120px"}, :hint => "example: (02)727-2727"
+       f.input :cp,  :input_html => { :style => "width: 120px"}, :hint => "example: 0917-7272727"
+       f.input :fax, :input_html => { :style => "width: 120px"}, :hint => "example: (02)727-2727"
     end
     f.inputs "Request / Source" do
-       f.input :source,  :collection => [["Website","Wesite"],["Fliers", "Fliers"],["News Paper","News Paper"]], :as => :radio 
+       f.input :sales_engineer, :hint => "Please put your name in uppercase example:JAMES DELA CRUZ"
+       #f.input :source,  :collection => [["Website","Wesite"],["Fliers", "Fliers"],["News Paper","News Paper"]]
        f.input :inquiry, :label => "Request", :input_html => { :rows => 3 }
     end
     f.buttons
@@ -45,6 +46,7 @@ form do |f|
     column :company_name
     column :company_address
     column :contact_person
+    column :sales_engineer
     column do |inquiry|
       link_to("Details", admin_inquiry_path(inquiry)) + " | " + \
       link_to("Edit", edit_admin_inquiry_path(inquiry)) + " | " + \
