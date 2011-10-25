@@ -46,7 +46,7 @@ form do |f|
     column :company_name
     column :company_address
     column :contact_person
-    #column :sales_engineer
+    column :sales_engineer
     column do |inquiry|
       link_to("Details", admin_inquiry_path(inquiry)) + " | " + \
       link_to("Edit", edit_admin_inquiry_path(inquiry)) + " | " + \

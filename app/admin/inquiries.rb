@@ -44,7 +44,7 @@ form do |f|
 
   index do
     column :company_name
-    column :company_address
+    #column :company_address
     column :contact_person
     column :sales_engineer
     column do |inquiry|
