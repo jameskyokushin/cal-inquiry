@@ -11,7 +11,7 @@ filter :contact_person
       row("Contact Person") { inquiry.contact_person }
       row("Contact Number") { inquiry.tel  }
       row("") { inquiry.cp  }
-      row("") { inquiry.fax  }
+      row("") { inquiry.fax }
       row("Source") { inquiry.source  }
       end
     end
@@ -35,7 +35,7 @@ form do |f|
        f.input :fax, :input_html => { :style => "width: 120px"}, :label => "FAX"
     end
     f.inputs "Request / Source" do
-       #f.input :sales_engineer, :hint => "Please put your name in uppercase example:JAMES DELA CRUZ"
+       f.input :sales_engineer, :hint => "Please put your name in uppercase example:JAMES DELA CRUZ"
        #f.input :source,  :collection => [["Website","Wesite"],["Fliers", "Fliers"],["News Paper","News Paper"]]
        f.input :inquiry, :label => "INQUIRED", :input_html => { :rows => 3 }
     end
@@ -51,7 +51,7 @@ form do |f|
     #column :sales_engineer
     column do |inquiry|
       link_to("Details", admin_inquiry_path(inquiry)) + " | " + \
-      link_to("Edit", edit_admin_inquiry_path(inquiry)) + " | " + \
+      #link_to("Edit", edit_admin_inquiry_path(inquiry)) + " | " + \
       link_to("Delete", admin_inquiry_path(inquiry), :method => :delete, :confirm => "Are you sure?")
     end
   end

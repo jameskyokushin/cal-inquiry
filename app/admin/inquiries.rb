@@ -11,7 +11,7 @@ filter :contact_person
       row("Contact Person") { inquiry.contact_person }
       row("Contact Number") { inquiry.tel  }
       row("") { inquiry.cp  }
-      row("") { inquiry.fax  }
+      row("") { inquiry.fax }
       row("Source") { inquiry.source  }
       end
     end

@@ -1,0 +1,8 @@
+class Inquiry < ActiveRecord::Base
+ 
+ def admin_user
+   admin_user = AdminUser.find params[:id]
+   admin_user.update_attributes(:sales_engineer => true)
+   
+ end
+end
