@@ -34,7 +34,7 @@ form do |f|
        f.input :fax, :input_html => { :style => "width: 120px"}
     end
     f.inputs "Request / Source" do
-       #f.input :sales_engineer, :hint => "Please put your name in uppercase example:JAMES DELA CRUZ"
+       f.input :sales_engineer, :hint => "Please put your name in uppercase example:JAMES DELA CRUZ"
        #f.input :source,  :collection => [["Website","Wesite"],["Fliers", "Fliers"],["News Paper","News Paper"]]
        f.input :inquiry, :label => "Request", :input_html => { :rows => 3 }
     end
