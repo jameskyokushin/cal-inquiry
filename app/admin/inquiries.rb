@@ -2,26 +2,6 @@ ActiveAdmin.register Inquiry do
 
 filter :company_name
 filter :contact_person
-
- show :title => :company_name do
-    panel "Company Information" do
-      attributes_table_for inquiry do
-      row("Company Name") { inquiry.company_name }
-      row("Address") { inquiry.company_address }
-      row("Contact Person") { inquiry.contact_person }
-      row("Contact Number") { inquiry.tel  }
-      row("") { inquiry.cp  }
-      row("") { inquiry.fax }
-      row("Source") { inquiry.source  }
-      end
-    end
-     panel "Remarks" do
-      attributes_table_for inquiry do
-        row("") { inquiry.inquiry }
-      end
-    end
- end
- 
  
 form do |f|
     f.inputs "Inquiry call" do
@@ -41,7 +21,24 @@ form do |f|
     end
     f.buttons
   end
-
+  show :title => :company_name do
+    panel "Company Information" do
+      attributes_table_for inquiry do
+      row("Company Name") { inquiry.company_name }
+      row("Address") { inquiry.company_address }
+      row("Contact Person") { inquiry.contact_person }
+      row("Contact Number") { inquiry.tel  }
+      row("") { inquiry.cp  }
+      row("") { inquiry.fax }
+      row("Source") { inquiry.source  }
+      end
+    end
+     panel "Remarks" do
+      attributes_table_for inquiry do
+        row("") { inquiry.inquiry }
+      end
+    end
+ end
 
 
   index do
