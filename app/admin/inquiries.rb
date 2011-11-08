@@ -8,6 +8,7 @@ form do |f|
       f.input :company_name, :label => "COMPANY NAME"
       f.input :company_address, :label => "ADDRESS"
       f.input :contact_person, :label => "CONTACT PERSON"
+      f.input :source, :label => "Email" 
     end
     f.inputs "Contact Number" do
        f.input :tel, :input_html => { :style => "width: 120px"}, :label => "TELEPHONE"
@@ -30,7 +31,7 @@ form do |f|
       row("Contact Number") { inquiry.tel  }
       row("") { inquiry.cp  }
       row("") { inquiry.fax }
-      row("Source") { inquiry.source  }
+      row("Email") { inquiry.source  }
       end
     end
      panel "Remarks" do
