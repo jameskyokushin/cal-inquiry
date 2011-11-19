@@ -1,3 +1,15 @@
+<div id="form1">
+<br />
+<br />
+<div id="link1">
+<%= link_to 'listing Leads', inquiries_path %>||
+<%= link_to 'Create New Sales Lead', new_inquiry_path %>
+</div>
+<br />
+<div id="link">
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
+<%= current_user.email if user_signed_in? %>
+</div>
 <%= semantic_form_for(@inquiry) do |f| %>
   <%= f.inputs do %>
   <%= f.input :company_name %>
@@ -9,3 +21,4 @@
 <% end %>
   <%= f.buttons %>
 <% end %>
+</div>
