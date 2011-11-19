@@ -1,4 +1,3 @@
-
 <%= semantic_form_for(@inquiry) do |f| %>
   <%= f.inputs do %>
   <%= f.input :company_name %>
