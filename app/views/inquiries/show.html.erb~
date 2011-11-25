@@ -22,7 +22,7 @@
 
 <p>
   <b>E mail:</b>
-  <%= @inquiry.sales_engineer %>
+  <%= @inquiry.e_mail %>
 </p>
 
 <p>
